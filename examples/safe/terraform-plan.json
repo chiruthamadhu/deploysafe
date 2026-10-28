@@ -1,0 +1,28 @@
+{
+  "format_version": "1.2",
+  "resource_changes": [
+    {
+      "address": "aws_s3_bucket.safe_data",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "safe_data",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "bucket": "deploysafe-demo-data",
+          "tags": {
+            "Environment": "dev"
+          },
+          "acl": "private"
+        },
+        "after": {
+          "bucket": "deploysafe-demo-data",
+          "tags": {
+            "Environment": "test"
+          },
+          "acl": "private"
+        }
+      }
+    }
+  ]
+}

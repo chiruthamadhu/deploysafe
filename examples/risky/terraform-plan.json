@@ -1,0 +1,41 @@
+{
+  "format_version": "1.2",
+  "resource_changes": [
+    {
+      "address": "aws_s3_bucket.important_data",
+      "change": {
+        "actions": ["delete"],
+        "before": {
+          "bucket": "important-data"
+        },
+        "after": null
+      }
+    },
+    {
+      "address": "aws_s3_bucket_acl.public_bucket",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "acl": "private"
+        },
+        "after": {
+          "acl": "public-read"
+        }
+      }
+    },
+    {
+      "address": "aws_s3_bucket_server_side_encryption_configuration.data",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "server_side_encryption_configuration": [
+            {
+              "rule": "AES256"
+            }
+          ]
+        },
+        "after": {}
+      }
+    }
+  ]
+}

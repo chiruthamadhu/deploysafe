@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+
+# Terraform state and local files
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Generated reports
+reports/*.json
+reports/*.md
+!reports/.gitkeep
+
+# Editor files
+.vscode/
+.idea/
+*.swp
